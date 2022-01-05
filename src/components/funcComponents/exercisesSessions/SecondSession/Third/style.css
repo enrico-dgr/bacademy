@@ -1,0 +1,13 @@
+.exercises__second-session__third section {
+  padding: 9px;
+}
+
+.exercises__second-session__third h1 {
+  align-self: center;
+  justify-self: center;
+}
+
+.exercises__second-session__third__cards-list {
+  max-height: 300px;
+  overflow-y: auto;
+}

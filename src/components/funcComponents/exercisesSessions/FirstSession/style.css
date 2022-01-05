@@ -1,0 +1,7 @@
+.exercises__first-session {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+}

@@ -1,0 +1,10 @@
+.exercises__second-session__first__scoreboard {
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.exercises__second-session__first__scoreboard p {
+  border: 1px solid red;
+  padding: 3px;
+  margin: 3px;
+}

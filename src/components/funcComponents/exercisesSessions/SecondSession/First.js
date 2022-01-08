@@ -115,7 +115,7 @@ const First = () => {
 
   return (
     <section className="exercises__second-session__first exercise">
-      <h1>First</h1>
+      <h1>Rock paper scissors</h1>
       <div className="exercises__second-session__first__scoreboard">
         <p>User points: {wonMatches}</p>
         <p>CPU points: {lostMatches}</p>

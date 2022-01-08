@@ -1,0 +1,8 @@
+.exercises__second-session__fourth__enemy-field__cell__ship {
+  height: 28px;
+  width: 28px;
+  margin: 0;
+  padding: 0;
+
+  background-color: red;
+}

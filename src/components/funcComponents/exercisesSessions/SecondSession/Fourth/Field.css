@@ -1,0 +1,38 @@
+.exercises__second-session__fourth__field {
+  border: 3px solid #462921;
+  width: 500px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: repeat(10, 50px);
+  grid-auto-flow: row;
+}
+
+.exercises__second-session__fourth__field__cell {
+  height: 48px;
+  width: 48px;
+  border: 1px solid green;
+  background-color: blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.exercises__second-session__fourth__field__cell--hit {
+  border: 1px solid green;
+  background-color: yellow;
+}
+.exercises__second-session__fourth__field__cell--hit-ship {
+  border: 1px solid green;
+  background-color: red;
+}
+
+.exercises__second-session__fourth__field__cell__ship {
+  height: 28px;
+  width: 28px;
+  margin: 0;
+  padding: 0;
+
+  background-color: black;
+}

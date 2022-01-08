@@ -74,7 +74,7 @@ const Second = () => {
 
   return (
     <section className="exercises__second-session__second exercise">
-      <h1>Second</h1>
+      <h1>Annual income tax</h1>
       <input
         type="number"
         value={inputNum}

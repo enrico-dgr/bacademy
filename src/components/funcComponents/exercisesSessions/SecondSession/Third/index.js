@@ -110,7 +110,7 @@ const Third = () => {
 
   return (
     <section className="exercises__second-session__third exercise">
-      <h1>Third</h1>
+      <h1>Exams overview</h1>
       <section>
         <b>Statistics</b>
         <p>Number of exams: {numExams}</p>

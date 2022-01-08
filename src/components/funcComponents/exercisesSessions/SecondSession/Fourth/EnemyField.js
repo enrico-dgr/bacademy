@@ -8,7 +8,7 @@ import React from "react";
 /**
  *
  * @param {{
- *  field: { type: "sea"|"shipPart"; hit: boolean }[][] ;
+ *  field: Field ;
  *  onConfirm: { ( e: { x: number ; y: number }) => void }
  * }} props
  * @returns { JSX.Element }
@@ -32,9 +32,15 @@ const EnemyField = ({ field, onConfirm }) => {
                       : "--hit"
                   }`}
               >
-                {field[x][y].type === "sea" ? undefined : (
-                  <div className="exercises__second-session__fourth__enemy-field__cell__ship"></div>
-                )}
+                <div
+                  className="exercises__second-session__fourth__field__cell__ship"
+                  style={{
+                    backgroundColor:
+                      field[x][y].type === "sea" || field[x][y].hit === false
+                        ? undefined
+                        : field[x][y].shipColor,
+                  }}
+                ></div>
               </div>
             ))
             .reverse()

@@ -9,7 +9,7 @@ import React from "react";
  */
 const Idle = ({ onConfirm }) => {
   const [firstPlayer, setFirstPlayer] = React.useState("");
-  const [secondPlayer, setSecondPlayer] = React.useState("");
+  // const [secondPlayer, setSecondPlayer] = React.useState("");
 
   return (
     <div className="exercises__second-session__fourth__idle">
@@ -19,15 +19,15 @@ const Idle = ({ onConfirm }) => {
         value={firstPlayer}
         onChange={(e) => setFirstPlayer(e.target.value)}
       />
-      <input
+      {/* <input
         type="text"
         placeholder="second player"
         value={secondPlayer}
         onChange={(e) => setSecondPlayer(e.target.value)}
-      />
+      /> */}
       <button
         onClick={() => {
-          onConfirm({ firstPlayer, secondPlayer });
+          onConfirm({ firstPlayer, secondPlayer: "" });
         }}
       >
         Next

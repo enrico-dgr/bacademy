@@ -27,28 +27,29 @@ const FIELD_LENGTH = 10;
  * @type {{
  *   length: number;
  *   quantity: number;
+ *   color: string;
  *  }[]}
  */
 export const STARTING_SHIPS = [
   {
     length: 5,
     quantity: 1,
+    color: "green",
   },
   {
     length: 4,
     quantity: 1,
+    color: "gray",
   },
   {
     length: 3,
-    quantity: 1,
-  },
-  {
-    length: 3,
-    quantity: 1,
+    quantity: 2,
+    color: "brown",
   },
   {
     length: 2,
     quantity: 1,
+    color: "yellow",
   },
 ];
 

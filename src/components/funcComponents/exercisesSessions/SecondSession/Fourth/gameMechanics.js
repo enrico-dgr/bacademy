@@ -172,13 +172,13 @@ export const isValidNewShipPart = (
  * @description
  * @param { Point } newPoint the coordinates must be positive integers
  * @param { Field } placementField both lengths must be equal
- * @param { number } shipId
+ * @param { string } shipColor
  * @return { Field } the new field with updated ship
  */
-export const newShipPart = (newPoint, placementField, shipId) => {
+export const newShipPart = (newPoint, placementField, shipColor) => {
   let field = placementField;
   field[newPoint.x][newPoint.y].type = "shipPart";
-  field[newPoint.x][newPoint.y].shipId = shipId;
+  field[newPoint.x][newPoint.y].shipColor = shipColor;
 
   return field;
 };

@@ -1,4 +1,70 @@
+.exercises__second-session__fourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercises__second-session__fourth h1 {
+  font-size: x-large;
+}
+
+.exercises__second-session__fourth__legend {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.exercises__second-session__fourth__legend__list {
+  width: fit-content;
+  display: flex;
+  margin: 0 20px;
+  border-left: 2px black solid;
+  border-bottom: 2px black solid;
+  border-top: 2px black solid;
+}
+
+.exercises__second-session__fourth__legend__list div {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-right: 2px black solid;
+}
+
+.exercises__second-session__fourth__placement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .exercises__second-session__fourth__playing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercises__second-session__fourth__playing__fields {
+  width: 100%;
+  display: flex;
+}
+
+.exercises__second-session__fourth__ended {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercises__second-session__fourth__ended__winner-message {
+  background-color: aqua;
+  color: green;
+  font-size: large;
+  padding: 10px;
+}
+
+.exercises__second-session__fourth__ended__fields {
   width: 100%;
   display: flex;
 }

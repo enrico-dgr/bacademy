@@ -1,13 +1,16 @@
 import "./Field.css";
 
 // eslint-disable-next-line no-unused-vars
+import * as types from "./types";
+
+// eslint-disable-next-line no-unused-vars
 import Game from "./game";
 import React from "react";
 
 /**
  *
  * @param {{
- *  field: { type: "sea"|"shipPart"; hit: boolean }[][] ;
+ *  field: Field ;
  *  onConfirm: { ( e: { x: number ; y: number }) => void }
  * }} props
  * @returns { JSX.Element }
@@ -31,9 +34,15 @@ const Field = ({ field, onConfirm }) => {
                       : "--hit"
                   }`}
               >
-                {field[x][y].type === "sea" ? undefined : (
-                  <div className="exercises__second-session__fourth__field__cell__ship"></div>
-                )}
+                <div
+                  className="exercises__second-session__fourth__field__cell__ship"
+                  style={{
+                    backgroundColor:
+                      field[x][y].type === "sea"
+                        ? undefined
+                        : field[x][y].shipColor,
+                  }}
+                ></div>
               </div>
             ))
             .reverse()

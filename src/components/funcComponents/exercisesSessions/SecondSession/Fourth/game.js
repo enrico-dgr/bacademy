@@ -25,10 +25,7 @@ export default class Game {
   /**
    * @type {{
    *  playerName: string;
-   *  ships: {
-   *   length: number;
-   *   quantity: number;
-   *  }[],
+   *  ships: Ship[],
    *  pointsCounter: { x: number; y: number }[] ;
    *  compulsoryDirection: 'v' | 'h' | 'none' ;
    * }[]}

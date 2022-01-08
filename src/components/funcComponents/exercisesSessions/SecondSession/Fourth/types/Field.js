@@ -3,7 +3,7 @@
  * @typedef { Object } Cell
  * @property { 'sea' | 'shipPart' } type
  * @property { boolean } hit
- * @property { number } shipId - `0` if `type === 'sea'`
+ * @property { string } shipColor - `'none'` if `type === 'sea'`
  */
 
 /**

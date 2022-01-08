@@ -143,13 +143,13 @@ const placeShip = (game, playerName, point, direction) => {
   }
 
   // insert them
-  const shipId = shipsToPlace.ships[0].length;
+  const shipColor = shipsToPlace.ships[0].color;
 
   for (let i = 0; i < shipsToPlace.ships[0].length; i++) {
     game.players[playerId].field = gameMechanics.newShipPart(
       { ...point, [coordinate]: point[coordinate] + i },
       game.players[playerId].field,
-      shipId
+      shipColor
     );
   }
 

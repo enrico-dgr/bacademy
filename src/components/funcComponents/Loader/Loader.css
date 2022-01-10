@@ -1,0 +1,46 @@
+.loader-base {
+  height: 40px;
+  width: 80px;
+  font-size: small;
+  background-color: inherit;
+  border: 1px solid cadetblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  animation-name: loading;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    border-radius: 50%;
+  }
+  15% {
+    border-top-left-radius: 35%;
+  }
+  25% {
+    border-top-left-radius: 50%;
+  }
+  40% {
+    border-top-right-radius: 35%;
+  }
+  50% {
+    border-top-right-radius: 50%;
+  }
+  65% {
+    border-bottom-right-radius: 35%;
+  }
+  75% {
+    border-bottom-right-radius: 50%;
+  }
+  90% {
+    border-bottom-left-radius: 35%;
+  }
+  100% {
+    border-bottom-left-radius: 50%;
+  }
+}

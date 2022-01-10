@@ -244,7 +244,7 @@ export const attack = (attackedPoint, enemyField) => {
 /**
  * @description
  * @param { Field } enemyField both lengths must be equal
- * @return { Field } the new field with updated ship
+ * @return { { shipPart: boolean; field: Field; } } the new field with updated ship
  */
 export const botAttack = (enemyField) => {
   const randomPoint = utils.getRandomPoint(9);
@@ -261,5 +261,9 @@ export const botAttack = (enemyField) => {
 
   field[randomPoint.x][randomPoint.y].hit = true;
 
-  return field;
+  return {
+    shipPart:
+      field[randomPoint.x][randomPoint.y].type === "shipPart" ? true : false,
+    field,
+  };
 };

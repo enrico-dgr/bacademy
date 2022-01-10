@@ -11,9 +11,14 @@
 
 .exercises__second-session__fourth__legend {
   width: 100%;
+  margin: 10px;
   display: flex;
   align-items: center;
 }
+
+.exercises__second-session__fourth__legend p {
+}
+
 .exercises__second-session__fourth__legend__list {
   width: fit-content;
   display: flex;
@@ -24,10 +29,20 @@
 }
 
 .exercises__second-session__fourth__legend__list div {
-  width: fit-content;
-  height: fit-content;
-  padding: 10px;
+  width: max-content;
+  height: max-content;
+  padding: 0 5px;
   border-right: 2px black solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercises__second-session__fourth__legend__list div div {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin: 0 5px;
 }
 
 .exercises__second-session__fourth__placement {

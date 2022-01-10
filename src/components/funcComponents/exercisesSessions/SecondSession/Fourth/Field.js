@@ -34,6 +34,7 @@ const Field = ({ field, onConfirm }) => {
                       : "--hit"
                   }`}
               >
+                {" "}
                 <div
                   className="exercises__second-session__fourth__field__cell__ship"
                   style={{

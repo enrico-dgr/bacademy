@@ -1,0 +1,9 @@
+.input-base {
+  width: 20px;
+  height: 20px;
+}
+
+.input-base--animation:focus {
+  border-bottom: 20px red solid;
+  background-color: brown;
+}

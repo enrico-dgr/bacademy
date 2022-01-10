@@ -3,6 +3,10 @@
   overflow-y: auto;
   background-color: #282c34;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .App-logo {

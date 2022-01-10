@@ -15,7 +15,7 @@ const Idle = ({ onConfirm }) => {
     <div className="exercises__second-session__fourth__idle">
       <input
         type="text"
-        placeholder="first player"
+        placeholder="Player name"
         value={firstPlayer}
         onChange={(e) => setFirstPlayer(e.target.value)}
       />

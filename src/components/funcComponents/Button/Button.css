@@ -1,0 +1,12 @@
+.button-base {
+  background-color: cadetblue;
+}
+
+.button-base--animation {
+  padding: 3px;
+  transition: padding 0.5s;
+}
+
+.button-base--animation:focus {
+  padding: 8px;
+}

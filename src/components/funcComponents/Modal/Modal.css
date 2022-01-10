@@ -1,0 +1,16 @@
+.modal-base {
+  width: max-content;
+  height: max-content;
+  padding: 8px;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color: black;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

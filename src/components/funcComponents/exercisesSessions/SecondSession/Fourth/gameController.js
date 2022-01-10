@@ -124,7 +124,7 @@ const placeShip = (game, playerName, point, direction) => {
 
   // validate each point
 
-  const coordinate = direction === "h" ? "x" : "y";
+  const coordinate = direction === "h" ? "y" : "x";
 
   for (let i = 0; i < shipsToPlace.ships[0].length; i++) {
     const res = gameMechanics.isValidNewShipPart(
@@ -268,11 +268,18 @@ const attack = (game, attackedPoint) => {
   // if bot, auto attack
   if (game.players[enemyId].type === "bot") {
     // this code is ok because there are only two players
-    game.players[playerId].field = gameMechanics.botAttack(
-      game.players[playerId].field
-    );
+    const resBotAttack = gameMechanics.botAttack(game.players[playerId].field);
+    game.players[playerId].field = resBotAttack.field;
+
+    if (resBotAttack.shipPart) {
+      game.players[playerId].availableShipParts--;
+    }
     // this code is ok because there are only two players
     game.currentPlayer = game.players[playerId].name;
+
+    if (game.players[playerId].availableShipParts === 0) {
+      game.phase = "ended";
+    }
   }
 
   return {

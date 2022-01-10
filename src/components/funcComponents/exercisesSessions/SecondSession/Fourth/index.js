@@ -13,6 +13,7 @@ const Fourth = () => {
   const [game, setGame] = React.useState(new Game());
   const [error, setError] = React.useState("...");
   const [playerName, setPlayerName] = React.useState("");
+  const [direction, setDirection] = React.useState("h");
 
   /**
    *
@@ -42,7 +43,12 @@ const Fourth = () => {
    * }} e
    */
   const onConfirmPlacement = (e) => {
-    const res = GameController.placeShip(game, playerName, e, "h");
+    const res = GameController.placeShip(
+      game,
+      playerName,
+      e,
+      direction !== "h" && direction !== "v" ? "h" : direction
+    );
     if (res.valid === false) {
       setError(res.message);
       return;
@@ -77,8 +83,8 @@ const Fourth = () => {
         <div className="exercises__second-session__fourth__legend__list">
           {GameMode.STARTING_SHIPS.map((s) => (
             <div key={s.length}>
-              <p>Length ship: {s.length}</p>
-              <p>Color ship: {s.color}</p>
+              <p>{s.length}</p>
+              <div style={{ backgroundColor: s.color }}></div>
             </div>
           ))}
         </div>{" "}
@@ -100,7 +106,11 @@ const Fourth = () => {
         return (
           <div className="exercises__second-session__fourth__placement">
             <Legend />
-
+            <button onClick={() => setDirection(direction === "h" ? "v" : "h")}>
+              {direction === "h"
+                ? `Horizontal (${String.fromCharCode(8594)})`
+                : `Vertical (${String.fromCharCode(8593)})`}
+            </button>
             <Field
               field={p.game.players[0].field}
               onConfirm={onConfirmPlacement}
@@ -112,11 +122,17 @@ const Fourth = () => {
           <div className="exercises__second-session__fourth__playing">
             <Legend />
             <div className="exercises__second-session__fourth__playing__fields">
-              <Field field={p.game.players[0].field} onConfirm={() => {}} />
-              <EnemyField
-                field={p.game.players[1].field}
-                onConfirm={onConfirmPlaying}
-              />
+              <div>
+                <p>{p.game.players[0].name}</p>
+                <Field field={p.game.players[0].field} onConfirm={() => {}} />
+              </div>
+              <div>
+                <p>Bot</p>
+                <EnemyField
+                  field={p.game.players[1].field}
+                  onConfirm={onConfirmPlaying}
+                />
+              </div>
             </div>
           </div>
         );
@@ -129,11 +145,17 @@ const Fourth = () => {
               won{" "}
             </p>
             <div className="exercises__second-session__fourth__ended__fields">
-              <Field field={p.game.players[0].field} onConfirm={() => {}} />
-              <EnemyField
-                field={p.game.players[1].field}
-                onConfirm={() => {}}
-              />
+              <div>
+                <p>{p.game.players[0].name}</p>
+                <Field field={p.game.players[0].field} onConfirm={() => {}} />
+              </div>
+              <div>
+                <p>Bot</p>
+                <EnemyField
+                  field={p.game.players[1].field}
+                  onConfirm={() => {}}
+                />
+              </div>
             </div>
           </div>
         );

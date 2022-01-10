@@ -1,6 +1,7 @@
 import "./App.css";
 
-import Exercises from "./screens/Exercises";
+import ExamplePage from "./screens/ExamplePage";
+// import Exercises from "./screens/Exercises";
 import logo from "./logo.svg";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Exercises />
+      {/* <Exercises /> */}
+      <ExamplePage />
     </div>
   );
 }

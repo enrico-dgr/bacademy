@@ -53,6 +53,11 @@ const Second = () => {
     return applyTaxes(amount, taxIndex + 1) + tax;
   };
 
+  const onChangeHandler = (e) => setInputNum(Number(e.target.value));
+
+  const onKeyDownHandler = (e) =>
+    e.key !== "Enter" ? undefined : onClick(inputNum);
+
   /**
    * @param {number} amount
    */
@@ -66,7 +71,7 @@ const Second = () => {
     return true;
   };
 
-  const onClick = (amount) => {
+  const onClick = (amount) => () => {
     if (isValid(amount)) {
       setResult(applyTaxes(amount));
     }
@@ -78,10 +83,10 @@ const Second = () => {
       <input
         type="number"
         value={inputNum}
-        onChange={(e) => setInputNum(Number(e.target.value))}
-        onKeyDown={(e) => (e.key !== "Enter" ? undefined : onClick(inputNum))}
+        onChange={onChangeHandler}
+        onKeyDown={onKeyDownHandler}
       />
-      <button onClick={() => onClick(inputNum)}>Calculate</button>
+      <button onClick={onClick(inputNum)}>Calculate</button>
       <p>{result === 0 ? "" : "Result: " + result}</p>
       {error === "" ? undefined : <p>{error}</p>}
     </section>

@@ -11,6 +11,8 @@ const Input = (props) => {
       placeholder={props.placeholder}
       style={props.style}
       type={props.type}
+      value={props.value}
+      onChange={props.onChange}
     />
   );
 };
@@ -18,17 +20,21 @@ const Input = (props) => {
 Input.defaultProps = {
   animation: true,
   classNames: "",
+  onChange: () => undefined,
   placeholder: "",
   style: {},
   type: "text",
+  value: "",
 };
 
 Input.propTypes = {
   animation: PropTypes.bool,
   classNames: PropTypes.string,
+  onChange: PropTypes.func,
   placeholder: PropTypes.string,
   style: PropTypes.object,
   type: PropTypes.string,
+  value: PropTypes.string,
 };
 
 export default Input;

@@ -103,6 +103,8 @@ const First = () => {
     }
   }, [wonMatches, lostMatches]);
 
+  const onChangeHandler = (e) => setInputText(e.target.value);
+
   /**
    *
    * @param {string} text
@@ -113,6 +115,15 @@ const First = () => {
    */
   const isValid = (text) => VALUES.includes(text);
 
+  const onClickHandler = () => {
+    if (isValid(inputText)) {
+      setUserValue(inputText);
+      setError("");
+      return;
+    }
+    setError("Input is not valid");
+  };
+
   return (
     <section className="exercises__second-session__first exercise">
       <h1>Rock paper scissors</h1>
@@ -120,23 +131,8 @@ const First = () => {
         <p>User points: {wonMatches}</p>
         <p>CPU points: {lostMatches}</p>
       </div>
-      <input
-        type="text"
-        value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
-      />
-      <button
-        onClick={() => {
-          if (isValid(inputText)) {
-            setUserValue(inputText);
-            setError("");
-            return;
-          }
-          setError("Input is not valid");
-        }}
-      >
-        Try
-      </button>
+      <input type="text" value={inputText} onChange={onChangeHandler} />
+      <button onClick={onClickHandler}>Try</button>
       <p>{cpuValueToPrint === "" ? "" : "CPU's hand: " + cpuValueToPrint}</p>
       <p>{result}</p>
       {error === "" ? undefined : <p>{error}</p>}
